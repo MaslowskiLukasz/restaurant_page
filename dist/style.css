@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #ECBE64;
+  --secondary-color: #F3752B;
+  --accent-color: #F52F57;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 18px;
+}
+
+button {
+  border-radius: 20px;
+  border: none;
+  padding: .75em 1.5em .75em 1.5em;
+
+  color: #ffffff;
+  background-color: var(--accent-color);
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#top {
+  height: 25em;
+  width: 100%;
+
+  border-radius: 0 0 30px 30px;
+
+  background: linear-gradient(145.14deg, var(--primary-color) 12.63%, rgba(236, 190, 100, 0) 152.05%);
+}
+
+#top #heading {
+  padding: 2.5em 2em 0 2em;
+  margin-bottom: 0;
+}
+
+#middle {
+  margin-bottom: 5em;
+}
+
+#menu-section {
+  padding: 5em 2em 0 2em;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-item {
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 2em;
+
+  background: linear-gradient(0deg, var(--secondary-color) -11.76%, rgba(243, 117, 43, 0.51) -11.76%, rgba(243, 117, 43, 0) 63.45%);
+}
+
+#bottom {
+  padding: 2em 2em 2em 2em;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(37.21deg, #ECBE64 47.88%, rgba(236, 190, 100, 0) 129.72%);
+}
+
+#bottom h2 {
+  text-align: right;
+}
