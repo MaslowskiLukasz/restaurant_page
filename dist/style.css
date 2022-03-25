@@ -72,16 +72,22 @@ button {
 }
 
 #bottom {
-  padding: 2em 2em 2em 2em;
+  padding: 2em 2em 1em 2em;
   border-radius: 20px 20px 0 0;
   background: linear-gradient(37.21deg, #ECBE64 47.88%, rgba(236, 190, 100, 0) 129.72%);
 }
 
 #bottom h2 {
   text-align: right;
+  margin-bottom: 1.5em;
 }
 
 .btn-row {
   display: flex;
   justify-content: center;
+}
+
+.contact-info {
+  line-height: .5em;
+  margin-bottom: 3em;
 }
