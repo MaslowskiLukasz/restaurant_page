@@ -20,6 +20,7 @@ h1 {
 h2 {
   font-size: 36px;
 }
+
 h3 {
   font-size: 18px;
 }
@@ -59,9 +60,9 @@ button {
 }
 
 #menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
 }
 
 .row {
@@ -104,4 +105,10 @@ button {
 .contact-info {
   line-height: .5em;
   margin-bottom: 3em;
+}
+
+@media only screen and (min-width: 600px) {
+  #menu {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
