@@ -1,1 +1,1 @@
-console.log("Hello");
+(()=>{"use strict";!function(){const e=document.getElementById("content"),t=document.createElement("section"),n=document.createElement("section"),c=document.createElement("section");t.id="top",n.id="middle",c.id="bottom",t.appendChild(function(){const e=document.createElement("section"),t=document.createElement("h1"),n=document.createElement("button");return e.id="heading",t.textContent="Best burgers in town!",n.id="call-to-action-btn",n.textContent="Check it out!",e.appendChild(t),e.appendChild(n),e}()),e.appendChild(t)}()})();

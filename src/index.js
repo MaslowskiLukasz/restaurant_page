@@ -1,1 +1,3 @@
-console.log('Hello');
+import { openMainPage } from './home.js'
+
+openMainPage();
