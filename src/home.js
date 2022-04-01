@@ -1,4 +1,18 @@
-function createHeadingContent() {
+function createMenu() {
+  const menuSection = document.createElement('nav');
+  const menuItems = ['Home', 'Menu', 'Contact'];
+
+  for(let i = 0; i < menuItems.length; i++) {
+    const item = document.createElement('p');
+    item.classList.add('nav-item');
+    item.textContent = menuItems[i];
+    menuSection.appendChild(item);
+  }
+
+  return menuSection;
+}
+
+function createTopContent() {
   const heading = document.createElement('section');
   const title = document.createElement('h1');
   const btn = document.createElement('button');
@@ -7,6 +21,7 @@ function createHeadingContent() {
   title.textContent = 'Best burgers in town!';
   btn.id = 'call-to-action-btn';
   btn.textContent = 'Check it out!';
+  heading.appendChild(createMenu());
   heading.appendChild(title);
   heading.appendChild(btn);
 
@@ -101,7 +116,7 @@ let openMainPage = function() {
   middle.id = 'middle';
   bottom.id = 'bottom';
 
-  top.appendChild(createHeadingContent());
+  top.appendChild(createTopContent());
   middle.appendChild(createMiddleContent());
   bottom.appendChild(createBottomContent());
 

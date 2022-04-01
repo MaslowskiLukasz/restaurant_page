@@ -37,6 +37,21 @@ button {
   font-weight: bold;
 }
 
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav .nav-item {
+  margin-left: 1em;
+  border-bottom: 2px solid transparent;
+  transition: all .5s ease-in;
+}
+
+nav .nav-item:hover {
+  border-bottom: 2px solid var(--accent-color);
+}
+
 #top {
   height: 25em;
   width: 100%;
