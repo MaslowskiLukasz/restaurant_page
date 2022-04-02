@@ -26,4 +26,4 @@ menuNav.addEventListener('click', () => {
 contactNav.addEventListener('click', () => {
   clearPage();
   openContactPage();
-})
+});

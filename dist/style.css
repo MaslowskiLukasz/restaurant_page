@@ -44,12 +44,16 @@ nav {
 
 nav .nav-item {
   margin-left: 1em;
-  border-bottom: 2px solid transparent;
+  text-emphasis: filled circle var(--primary-color);
   transition: all .5s ease-in;
 }
 
 nav .nav-item:hover {
-  border-bottom: 2px solid var(--accent-color);
+  text-emphasis: filled circle var(--accent-color);
+}
+
+nav .nav-item-selected {
+  text-emphasis: filled circle var(--secondary-color);
 }
 
 #top {

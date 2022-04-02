@@ -4,9 +4,14 @@ function createNavbar() {
 
   for(let i = 0; i < menuItems.length; i++) {
     const item = document.createElement('p');
+
     item.classList.add('nav-item');
     item.textContent = menuItems[i];
     item.id = `${menuItems[i].toLowerCase()}-nav`;
+    if (i === 0) {
+      item.classList.add('nav-item-selected');
+    }
+
     menuSection.appendChild(item);
   }
 
