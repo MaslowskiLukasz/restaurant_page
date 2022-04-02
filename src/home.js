@@ -6,6 +6,7 @@ function createNavbar() {
     const item = document.createElement('p');
     item.classList.add('nav-item');
     item.textContent = menuItems[i];
+    item.id = `${menuItems[i].toLowerCase()}-nav`;
     menuSection.appendChild(item);
   }
 
