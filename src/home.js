@@ -1,4 +1,4 @@
-function createNavbar() {
+function createNavbar(selected) {
   const menuSection = document.createElement('nav');
   const menuItems = ['Home', 'Menu', 'Contact'];
 
@@ -8,7 +8,7 @@ function createNavbar() {
     item.classList.add('nav-item');
     item.textContent = menuItems[i];
     item.id = `${menuItems[i].toLowerCase()}-nav`;
-    if (i === 0) {
+    if (i === selected) {
       item.classList.add('nav-item-selected');
     }
 
@@ -27,7 +27,7 @@ function createTopContent() {
   title.textContent = 'Best burgers in town!';
   btn.id = 'call-to-action-btn';
   btn.textContent = 'Check it out!';
-  heading.appendChild(createNavbar());
+  heading.appendChild(createNavbar(0));
   heading.appendChild(title);
   heading.appendChild(btn);
 
@@ -136,3 +136,4 @@ let openMainPage = function() {
 }
 
 export { openMainPage };
+export { createNavbar };
