@@ -1,4 +1,4 @@
-function createMenu() {
+function createNavbar() {
   const menuSection = document.createElement('nav');
   const menuItems = ['Home', 'Menu', 'Contact'];
 
@@ -21,48 +21,52 @@ function createTopContent() {
   title.textContent = 'Best burgers in town!';
   btn.id = 'call-to-action-btn';
   btn.textContent = 'Check it out!';
-  heading.appendChild(createMenu());
+  heading.appendChild(createNavbar());
   heading.appendChild(title);
   heading.appendChild(btn);
 
   return heading;
 }
 
-function createMiddleContent() {
-  const menuSection = document.createElement('section');
-  const menu = document.createElement('div');
-  const title = document.createElement('h2');
-  const btnRow = document.createElement('div');
-  const btn = document.createElement('button');
+function createMenu() {
   const burgersNames = ['Kura', 'Bekon', 'Mięśniak', 'Nachos'];
-  
-  menuSection.id = 'menu-section';
+  const prices = ['23.50 zł', '24,00 zł', '22,50 zł', '25,00 zł'];
+  const menu = document.createElement('div');
   menu.id = 'menu';
-  btn.id = 'full-menu-btn';
-  btn.textContent = 'See full menu'
-  title.textContent = 'Menu';
-  btnRow.classList.add('btn-row');
 
   for(let i = 0; i < burgersNames.length; i++) {
     const item = document.createElement('div');
     const name = document.createElement('h3');
     const price = document.createElement('p');
     
-
     item.classList.add('menu-item');
     name.textContent = burgersNames[i];
     price.classList.add('price');
-    price.textContent = '23.50 zł';
+    price.textContent = prices[i];
 
     item.appendChild(name);
     item.appendChild(price);
-
     menu.appendChild(item);
   }
 
+  return menu;
+}
+
+function createMiddleContent() {
+  const menuSection = document.createElement('section');
+  const title = document.createElement('h2');
+  const btnRow = document.createElement('div');
+  const btn = document.createElement('button');
+  
+  menuSection.id = 'menu-section';
+  btn.id = 'full-menu-btn';
+  btn.textContent = 'See full menu'
+  title.textContent = 'Menu';
+  btnRow.classList.add('btn-row');
+
   btnRow.appendChild(btn);
   menuSection.appendChild(title);
-  menuSection.appendChild(menu);
+  menuSection.appendChild(createMenu());
   menuSection.appendChild(btnRow);
 
   return menuSection;
