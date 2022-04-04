@@ -1,4 +1,4 @@
-import { createNavbar } from './home.js';
+import { createNavbar } from './navbar.js';
 
 function openMenuPage() {
   console.log('menu');
