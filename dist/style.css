@@ -57,7 +57,7 @@ nav .nav-item-selected {
 }
 
 #top {
-  height: 25em;
+  min-height: 10em;
   width: 100%;
 
   border-radius: 0 0 30px 30px;
@@ -65,9 +65,13 @@ nav .nav-item-selected {
   background: linear-gradient(145.14deg, var(--primary-color) 12.63%, rgba(236, 190, 100, 0) 152.05%);
 }
 
-#top #heading {
-  padding: 2.5em 2em 0 2em;
+#heading {
+  padding: 1.5em 2em 0 2em;
   margin-bottom: 0;
+}
+
+#top button {
+  margin-bottom: 5em;
 }
 
 #middle {
@@ -127,8 +131,8 @@ nav .nav-item-selected {
 }
 
 @media only screen and (min-width: 600px) {
-  #top #heading {
-    padding: 4.5em 16em 0 16em;
+  #heading {
+    padding: 2.5em 16em 0 16em;
   }
 
   #menu-section {
