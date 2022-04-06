@@ -1,5 +1,4 @@
 import { createNavbar } from './navbar.js';
-import { createMenu } from './home.js';
 
 function createTopContent() {
   const heading = document.createElement('section');
@@ -28,6 +27,30 @@ function createMainItem() {
   return div;
 }
 
+function createMenu() {
+  const burgersNames = ['Kura', 'Bekon', 'Mięśniak', 'Nachos'];
+  const prices = ['23.50 zł', '24,00 zł', '22,50 zł', '25,00 zł'];
+  const menu = document.createElement('div');
+  menu.id = 'menu';
+
+  for(let i = 0; i < burgersNames.length; i++) {
+    const item = document.createElement('div');
+    const name = document.createElement('h3');
+    const price = document.createElement('p');
+    
+    item.classList.add('menu-item');
+    name.textContent = burgersNames[i];
+    price.classList.add('price');
+    price.textContent = prices[i];
+
+    item.appendChild(name);
+    item.appendChild(price);
+    menu.appendChild(item);
+  }
+
+  return menu;
+}
+
 function createMiddleContent() {
   const middle = document.createElement('section');
   const heading = document.createElement('div');
@@ -53,4 +76,5 @@ function openMenuPage() {
   content.appendChild(createMiddleContent());
 }
 
-export { openMenuPage }
+export { createMenu };
+export { openMenuPage };
