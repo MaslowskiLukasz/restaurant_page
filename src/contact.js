@@ -22,8 +22,21 @@ function createInfo(x) {
   return contactInfo;
 }
 
+function createTopContent() {
+  const heading = document.createElement('section');
+  heading.id = 'heading';
+  heading.appendChild(createNavbar(2));
+  
+  return heading;
+}
+
 function openContactPage() {
-  console.log('contact');
+  const content = document.getElementById('content');
+  const top = document.createElement('section');
+
+  top.id = 'top';
+  top.appendChild(createTopContent());
+  content.appendChild(top);
 }
 
 export { openContactPage };
