@@ -1,5 +1,6 @@
 import { createNavbar } from './navbar.js';
 import { createMenu } from './menu.js';
+import { createInfo } from './contact.js';
 
 function createTopContent() {
   const heading = document.createElement('section');
@@ -37,28 +38,6 @@ function createMiddleContent() {
   return menuSection;
 }
 
-function createInfo(x) {
-  const contactInfo = document.createElement('div');
-  const streets = ['Ul. Pierwszy Adres 3', 'Ul. Drugi Adres 42/1'];
-  const phones = ['123 456 678', '987 654 321'];
-  const opening = ['Pn-Nd: 12:00 - 22:00', 'Pn-Nd: 12:00 - 21:00'];
-  
-  const street = document.createElement('h3');
-  const phone = document.createElement('p');
-  const open = document.createElement('p');
-  
-  street.textContent = streets[x];
-  phone.textContent = phones[x];
-  open.textContent = opening[x];
-
-  contactInfo.classList.add('contact-info');
-  contactInfo.appendChild(street);
-  contactInfo.appendChild(phone);
-  contactInfo.appendChild(open);
-
-  return contactInfo;
-}
-
 function createBottomContent() {
   const content = document.createElement('div');
   const title = document.createElement('h2');
@@ -72,7 +51,6 @@ function createBottomContent() {
   }
 
   return content;
-
 }
 
 let openMainPage = function() {
@@ -96,3 +74,4 @@ let openMainPage = function() {
 
 export { openMainPage };
 export { createNavbar };
+export { createBottomContent };

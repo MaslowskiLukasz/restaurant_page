@@ -1,4 +1,5 @@
 import { createNavbar } from './navbar.js';
+import { createBottomContent } from './home.js';
 
 function createTopContent() {
   const heading = document.createElement('section');
@@ -66,6 +67,15 @@ function createMiddleContent() {
   return middle;
 }
 
+function createBottom() {
+  const bottom = document.createElement('section');
+  
+  bottom.id = 'bottom';
+  bottom.appendChild(createBottomContent());
+
+  return bottom;
+}
+
 function openMenuPage() {
   const content = document.getElementById('content');
   const top = document.createElement('section');
@@ -74,6 +84,7 @@ function openMenuPage() {
   top.appendChild(createTopContent());
   content.appendChild(top);
   content.appendChild(createMiddleContent());
+  content.appendChild(createBottom());
 }
 
 export { createMenu };
