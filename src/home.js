@@ -119,3 +119,4 @@ let openMainPage = function() {
 
 export { openMainPage };
 export { createNavbar };
+export { createMenu };

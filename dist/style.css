@@ -76,10 +76,8 @@ nav .nav-item-selected {
 
 #middle {
   margin-bottom: 5em;
-}
+  padding: 3em 2em 0 2em;
 
-#menu-section {
-  padding: 5em 2em 0 2em;
 }
 
 #menu {
@@ -135,8 +133,8 @@ nav .nav-item-selected {
     padding: 2.5em 16em 0 16em;
   }
 
-  #menu-section {
-    padding: 10em 16em 0 16em;
+  #middle {
+    padding: 6em 16em 0 16em;
   }
 
   #menu {
